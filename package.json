@@ -2,9 +2,6 @@
   "name": "get-next-version",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "post-install": "npm install"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/starforge-universe/get-next-version.git"

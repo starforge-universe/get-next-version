@@ -12,4 +12,4 @@ outputs:
 runs:
   using: 'node20'
   main: 'index.js'
-  pre: 'npm run post-install'
+  pre: 'npm install'
