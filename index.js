@@ -2,8 +2,7 @@ const semver = require('semver')
 const fs = require('fs');
 
 const version = process.env.INPUT_VERSION
-const level = process.env.INPUT_LEVEL
-level = level.toLowerCase()
+const level = process.env.INPUT_LEVEL.toLowerCase()
 
 const validLevels = ['major', 'minor', 'patch']
 
