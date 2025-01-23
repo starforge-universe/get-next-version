@@ -1,0 +1,14 @@
+name: 'Get next version'
+description: 'Get next version according to the input'
+inputs:
+  version:
+    description: 'Version number input'
+  level:
+    description: 'Version step up level, valid values: major, minor, patch'
+    required: true
+outputs:
+  version:
+    description: 'Result of version number specification'
+runs:
+  using: 'node20'
+  main: 'index.js'
