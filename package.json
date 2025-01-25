@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "ncc": "ncc build index.js --license licenses.txt"
+    "ncc": "ncc build index.js --license licenses.txt",
+    "pre-push": "npm run ncc && git add dist/* && git commit -m \"dict generated\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "dependencies": {
     "@vercel/ncc": "^0.38.3",
     "semver": "^7.6.3"
+  },
+  "devDependencies": {
+    "pre-push": "^0.1.1"
   }
 }
