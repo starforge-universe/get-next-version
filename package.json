@@ -2,6 +2,9 @@
   "name": "get-next-version",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "ncc": "ncc build index.js --license licenses.txt"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/starforge-universe/get-next-version.git"
@@ -16,6 +19,7 @@
   "homepage": "https://github.com/starforge-universe/get-next-version#readme",
   "description": "",
   "dependencies": {
+    "@vercel/ncc": "^0.38.3",
     "semver": "^7.6.3"
   }
 }
