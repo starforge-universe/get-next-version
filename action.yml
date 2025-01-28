@@ -9,6 +9,8 @@ inputs:
 outputs:
   version:
     description: 'Result of version number specification'
+  version_plain:
+    description: 'Result of plain version number specification'
 runs:
   using: 'node20'
   main: 'dist/index.js'
