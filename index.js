@@ -11,7 +11,9 @@ if (!validLevels.includes(level)) {
   process.exit(1)
 }
 
-newVersion = (version.startsWith('v') ? 'v' : '') + semver.inc(version, level)
+newVersionPlain = semver.inc(version, level)
+newVersion = (version.startsWith('v') ? 'v' : '') + newVersionPlain
 
 fs.appendFileSync(process.env.GITHUB_OUTPUT, `version=${newVersion}\n`);
+fs.appendFileSync(process.env.GITHUB_OUTPUT, `version_plain=${newVersionPlain}\n`);
 process.exit(0);
