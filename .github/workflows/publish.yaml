@@ -1,0 +1,21 @@
+name: 'Publish'
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: 'Tests'
+    uses: ./.github/workflows/__call__checks.yaml
+
+  build:
+    name: 'Build'
+    needs: [test]
+    uses: ./.github/workflows/__call__build.yaml
+
+  publish:
+    name: 'Publish'
+    needs: [build]
+    uses: ./.github/workflows/__call__publish.yaml

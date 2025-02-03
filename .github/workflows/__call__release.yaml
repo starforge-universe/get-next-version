@@ -1,0 +1,40 @@
+name: 'Submodule - Release'
+
+on:
+  workflow_call:
+    inputs:
+      level:
+        required: true
+        description: 'Version level to increase'
+        type: string
+        default: 'patch'
+
+jobs:
+  release:
+    name: 'Release'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 'Check out'
+        uses: actions/checkout@v4
+
+      - name: 'Get latest version'
+        id: latest_version
+        uses: starforge-universe/get-latest-version@v1
+        with:
+          default: 'v0.0.0'
+
+      - name: 'Calculate next version'
+        id: increased_version
+        uses: starforge-universe/get-next-version@v1
+        with:
+          version: ${{ steps.latest_version.outputs.version }}
+          level: ${{ inputs.level }}
+
+      - name: 'Tag with new version'
+        id: tag-commit
+        uses: issue-ops/semver@v2
+        with:
+          use-version: ${{ steps.increased_version.outputs.version }}
+          overwrite: true
