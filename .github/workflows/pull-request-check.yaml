@@ -1,0 +1,10 @@
+name: 'Pull request checks'
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  checks:
+    name: 'Checks'
+    uses: ./.github/workflows/__call__checks.yaml
