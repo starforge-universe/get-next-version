@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "ncc": "ncc build index.js --license licenses.txt",
-    "pre-push": "npm run ncc && git add dist/* && git commit -m \"dist generated\""
+    "pre-push": "npm install && npm run ncc && git add dist/* && git commit -m \"dist generated\""
   },
   "repository": {
     "type": "git",
