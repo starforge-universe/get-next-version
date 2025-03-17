@@ -1,0 +1,25 @@
+name: 'Release'
+
+on:
+  workflow_dispatch:
+    inputs:
+      level:
+        required: true
+        description: 'Version level to increase'
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+
+jobs:
+  test:
+    name: 'Tests'
+    uses: ./.github/workflows/__call__checks.yaml
+
+  release:
+    name: 'Release'
+    needs: [test]
+    uses: ./.github/workflows/__call__release.yaml
+    with:
+      level: ${{ inputs.level }}

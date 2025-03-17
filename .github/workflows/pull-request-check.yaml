@@ -1,0 +1,9 @@
+name: 'Pull request checks'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    name: 'Checks'
+    uses: ./.github/workflows/__call__checks.yaml
