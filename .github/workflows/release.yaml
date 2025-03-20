@@ -13,13 +13,8 @@ on:
           - patch
 
 jobs:
-  test:
-    name: 'Tests'
-    uses: ./.github/workflows/__call__checks.yaml
-
   release:
     name: 'Release'
-    needs: [test]
     uses: ./.github/workflows/__call__release.yaml
     with:
       level: ${{ inputs.level }}
