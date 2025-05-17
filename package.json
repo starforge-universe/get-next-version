@@ -24,6 +24,5 @@
     "semver": "^7.6.3"
   },
   "devDependencies": {
-    "pre-push": "^0.1.1"
   }
 }
