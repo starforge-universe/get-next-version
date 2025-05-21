@@ -4,8 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    reviewers:
-      - "StarForgeWorker"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
