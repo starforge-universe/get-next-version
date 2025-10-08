@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+---
+
+Execute the following steps.
+
+1. **Update your local main branch**
+   ```sh
+   git checkout main
+   git pull origin main
+   ```
+
+2. **Fetch all remotes**
+   ```sh
+   git fetch --all
+   ```
