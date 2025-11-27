@@ -5,12 +5,7 @@ alwaysApply: false
 Execute the following steps.
 
 1. **Update your local main branch**
-   ```sh
-   git checkout main
-   git pull origin main
-   ```
+   Switch to the main branch and pull the latest changes.
 
 2. **Fetch all remotes**
-   ```sh
-   git fetch --all
-   ```
+   Fetch all remotes to get the latest changes from the remote repositories.
