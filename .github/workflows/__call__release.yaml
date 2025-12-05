@@ -34,7 +34,7 @@ jobs:
 
       - name: 'Tag with new version'
         id: tag-commit
-        uses: issue-ops/semver@v2
+        uses: issue-ops/semver@v3
         with:
           use-version: ${{ steps.increased_version.outputs.version }}
           overwrite: true
