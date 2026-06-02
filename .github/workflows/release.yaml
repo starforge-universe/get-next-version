@@ -16,5 +16,7 @@ jobs:
   release:
     name: 'Release'
     uses: ./.github/workflows/__call__release.yaml
+    permissions:
+      contents: write
     with:
       level: ${{ inputs.level }}
