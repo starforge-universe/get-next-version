@@ -12,5 +12,5 @@ outputs:
   version_plain:
     description: 'Result of plain version number specification'
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
